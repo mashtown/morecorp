@@ -26,8 +26,8 @@
             <div class="col-sm-3" id="sidebar">
                 <h4>Products</h4>
                 <ul class="list-unstyled">
-                    <li><a href="/dashboard/products/create">Add New Product</a></li>
-                    <li><a href="/dashboard/products">List Products</a></li>
+                    <li><a href="/dashboard/products/create"><i data-feather="plus-square"></i> Add New Product</a></li>
+                    <li><a href="/dashboard/products"><i data-feather="list"></i> List Products</a></li>
                 </ul>
             </div>
             <div class="col-sm-9" id="main-content">
@@ -37,5 +37,9 @@
     </div>
 
     <script src="{{ asset('assets/build/mcorp.min.js') }}"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+      feather.replace()
+    </script>
 </body>
 </html>

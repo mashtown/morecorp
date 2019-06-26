@@ -31,8 +31,8 @@
                     <td>{{ round($product->highest_bid,2) }}</td>
                     <td>{{ $product->views }}</td>
                     <td>
-                        <a href="/dashboard/products/edit/{{ $product->id }}">edit</a> / 
-                        <a href="/dashboard/products/delete/{{ $product->id }}">delete</a> 
+                        <a href="/dashboard/products/edit/{{ $product->id }}"><i data-feather="edit"></i></a> 
+                        <a href="/dashboard/products/delete/{{ $product->id }}"><i data-feather="trash-2"></i></a> 
                     </td>
                 </tr>
                 @endforeach

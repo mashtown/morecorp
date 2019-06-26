@@ -49,8 +49,7 @@ class ProductsController extends Controller
 
         if($product->save()){
             $redirect_url = '/dashboard/products/edit/'. $product->id;
-            return redirect($redirect_url);
-            Session::flash('status', 'Product created successfully');
+            return redirect($redirect_url)->with('status', 'Product created successfully');
         }else{
             return redirect()->back()->withInput();
         }

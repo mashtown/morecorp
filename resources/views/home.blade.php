@@ -16,8 +16,8 @@
 
                     Welcome {{ Auth::user()->name }}
                     <br><br>
-                    <a href="/dashboard/products">view products</a> / 
-                    <a href="/dashboard/products/create">Add new product</a>
+                    <a href="/dashboard/products"><i data-feather="list"></i> view products</a> / 
+                    <a href="/dashboard/products/create"><i data-feather="plus"></i> Add new product</a>
                 </div>
             </div>
         </div>

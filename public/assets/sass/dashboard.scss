@@ -52,6 +52,12 @@ body.dashboard{
 	    		a{
 					color: #000;
 					font-size: 12px;
+					font-weight: bold;
+					// NEST
+					.feather {
+					    margin-right: 4px;
+					    color: #999;
+					}
 	    		}
 	    	}
 	    }
