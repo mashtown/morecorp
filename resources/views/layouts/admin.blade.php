@@ -18,7 +18,7 @@
     <link href="{{ asset('assets/build/mcorp.min.css') }}" rel="stylesheet">
 
 </head>
-<body class="dashobard">
+<body class="dashboard">
 
     @include('layouts.partials.dashboard-nav')
     <div class="container-fluid">
