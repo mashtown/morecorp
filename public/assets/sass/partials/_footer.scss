@@ -1,0 +1,22 @@
+/* Footer
+============================= */
+
+footer {
+  background: #3e4855;
+  color: #fff;
+  // padding-top: 5px;
+  padding-bottom: 15px;
+  font-size: 14px;
+  // NEST
+  a{
+    display: block;
+    color: #fff;
+  }
+  .copyright{
+    font-size: 13px;
+    padding-top: 15px;
+    // margin-top: 25px;
+    // NEST
+    a{ display: inline-block; }
+  }
+}

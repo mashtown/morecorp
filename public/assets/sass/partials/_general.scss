@@ -1,0 +1,132 @@
+/* General
+============================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  display: block;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  // width: 100%;
+  height: 100%;
+  background: #fff;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+body {
+  display: block;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  // width: 100%;
+  height: 100%;
+  background: none;
+  overflow: visible;
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  color: #222;
+  letter-spacing: .025em;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 15px 0;
+  padding: 0;
+  position: relative;
+  line-height: normal;
+  font-weight: 200;
+}
+
+hr {
+  border-top: solid 1px #bbb;
+  border-bottom: solid 1px #eee;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #e9533f;
+  -webkit-transition: all 150ms ease-in;
+  -moz-transition: all 150ms ease-in;
+  -ms-transition: all 150ms ease-in;
+  -o-transition: all 150ms ease-in;
+  transition: all 150ms ease-in;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  &:hover, &:focus, &:active {
+    color: #222;
+    outline: none;
+    text-decoration: none;
+  }
+}
+
+input {
+  &[type="text"], &[type="password"], &[type="number"], &[type="email"] {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+button:focus {
+  outline: none;
+}
+
+div#map-container {
+  min-height: 300px;
+}
+
+.btn-group .dropdown-menu {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.modal-dialog {
+  width: 830px;
+}
+
+.lg-outer .lg-thumb-item {
+  border: 1px solid #000;
+  border-radius: 0;
+  position: relative;
+  background: no-repeat center center;
+  background-size: cover;
+  &.active, &:hover {
+    border-color: #e9533f;
+  }
+  img {
+    width: auto;
+    height: auto;
+    position: absolute;
+    left: -999px;
+  }
+}
+
+.btn {
+    padding: 1.4em 1.6em;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 2px;
+    text-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-image: none;
+    border: none;
+    &.btn-primary{
+      background-color: #00A99D;
+      // color: #3e4855;
+    }
+}
