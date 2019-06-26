@@ -60,4 +60,20 @@ body.frontend{
 	    border-top-left-radius: calc(.25rem - 1px);
 	    border-top-right-radius: calc(.25rem - 1px);
 	}
+
+	.maxed-content{
+		max-width: 750px;
+		width: 100%;
+		margin: auto;
+		// NEST
+		.product--info{
+			padding-top: 35px;
+			// NEST
+			.price-sku{
+				margin-top: 15px;
+				background: #f7f7f7;
+				padding: 10px;
+			}
+		}
+	}
 }

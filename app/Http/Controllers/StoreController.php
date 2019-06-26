@@ -34,15 +34,15 @@ class StoreController extends Controller
     public function singleProduct($id, $slug){
 
         $product = Product::findOrFail($id);
+        $highest_bidder = $product->bidings()->max('price');
+        $lowest_bidder = $product->bidings()->min('price');
 
-        dd($product);
+        // dd($highest_bidder);
 
-        if($product->save()){
-            $redirect_url = '/product/'. $product->id . '/' . str_slug($product->name);
-            // /product/{{ $product['id'] }}/{{ str_slug($product['name'])
-            return redirect($redirect_url)->with('status', 'Bidding successfully');
-        }else{
-            return redirect()->back()->withInput();
-        }
+        return view('store.products.single', [
+        	'product' => $product,
+        	'highest_bidder' => $highest_bidder,
+        	'lowest_bidder' => $lowest_bidder
+        ]);
     }
 }
