@@ -27,7 +27,13 @@
                 <h4>Products</h4>
                 <ul class="list-unstyled">
                     <li><a href="/dashboard/products/create"><i data-feather="plus-square"></i> Add New Product</a></li>
-                    <li><a href="/dashboard/products"><i data-feather="list"></i> List Products</a></li>
+                    <li><a href="/dashboard/products"><i data-feather="shopping-cart"></i> List Products</a></li>
+                </ul>
+                <h4>Reports</h4>
+                <ul class="list-unstyled">
+                    <li><a href="#"><i data-feather="users"></i> Customers</a></li>
+                    <li><a href="#"><i data-feather="file"></i> Orders</a></li>
+                    <li><a href="#"><i data-feather="layers"></i> Integrations</a></li>
                 </ul>
             </div>
             <div class="col-sm-9" id="main-content">
