@@ -19,12 +19,28 @@
                         <div class="row buttons">
                             <div class="col-xs-6">
                                 <a href="/product/{{ $product['id'] }}/{{ str_slug($product['name']) }}" class="">view</a>
-                                <a href="#" class="">bid</a>
+                                <a role="button" data-toggle="collapse" href="#collapse{{ $product['id'] }}" aria-expanded="false" aria-controls="collapse{{ $product['id'] }}">bid</a>
                             </div>
                             <div class="col-xs-6 text-right">
                                 <span class="product--price">R{{ $product['price'] }}</span>
                             </div>
                         </div>
+                        <form action="/post-bidding" class="collapse bidding--form" id="collapse{{ $product['id'] }}">
+                            {!! csrf_field() !!}
+                            <input type="hidden" name="product_id" value="{{ $product['id'] }}">
+                            <div class="form-group">
+                                <label for="name" class="sr-only">Email Address</label>
+                                <input type="text" class="form-control" id="email" name="email" placeholder="Email Address">
+                            </div>
+                            <div class="input-group">
+                                <label for="price" class="sr-only">Price</label>
+                                <span class="input-group-addon">R</span>
+                                <input type="text" class="form-control" id="price" id="name" placeholder="00.00">
+                            </div>
+                            <div class="form-group m-t-15">
+                                <button class="btn btn-primary btn-block" type="submit">Bid Now</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
