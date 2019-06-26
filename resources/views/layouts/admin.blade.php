@@ -24,7 +24,11 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-3" id="sidebar">
-                sub-menu
+                <h4>Products</h4>
+                <ul class="list-unstyled">
+                    <li><a href="/dashboard/products/create">Add New Product</a></li>
+                    <li><a href="/dashboard/products">List Products</a></li>
+                </ul>
             </div>
             <div class="col-sm-9" id="main-content">
                 @yield('content')         

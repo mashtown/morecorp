@@ -3,13 +3,6 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-3">
-            <h4>Products</h4>
-            <ul class="list-unstyled">
-                <li><a href="/dashboard/products/create">Add New Product</a></li>
-                <li><a href="/dashboard/products">List Products</a></li>
-            </ul>
-        </div>
         <div class="col-md-9">
             <div class="card">
                 <div class="card-header">Dashboard</div>
@@ -22,6 +15,9 @@
                     @endif
 
                     You are logged in!
+                    <br><br>
+                    <a href="/dashobard/products">view products</a> / 
+                    <a href="/dashobard/products/create">Add new product</a>
                 </div>
             </div>
         </div>
