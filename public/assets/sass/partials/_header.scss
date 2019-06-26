@@ -1,2 +1,11 @@
 /* Header
 ============================= */
+nav.navbar{
+	// NEST
+	&.navbar-inverse {
+	    background-image: none;
+	    filter: none;
+	    border-radius: 0;
+	    background-color: #343a40;
+	}
+}
