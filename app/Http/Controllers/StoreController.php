@@ -39,6 +39,10 @@ class StoreController extends Controller
 
         // dd($highest_bidder);
 
+        if($product){
+            $product->increment('views');
+        }
+
         return view('store.products.single', [
         	'product' => $product,
         	'highest_bidder' => $highest_bidder,
