@@ -115,8 +115,8 @@ div#map-container {
 }
 
 .btn {
-    padding: 1.4em 1.6em;
-    font-size: 16px;
+    padding: 10px 15px;
+    font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
     border-radius: 2px;
@@ -124,9 +124,10 @@ div#map-container {
     -webkit-box-shadow: none;
     box-shadow: none;
     background-image: none;
-    border: none;
+    text-decoration: none !important;
     &.btn-primary{
-      background-color: #00A99D;
-      // color: #3e4855;
+      background-color: transparent;
+      border-color: #000;
+      color: #3e4855;
     }
 }
