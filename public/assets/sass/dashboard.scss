@@ -36,4 +36,22 @@ body.dashboard{
 	    	}
 	    }
 	}
+
+	// CONTENT
+	#main-content{
+		// NEST
+		.card{
+			
+			// NEST
+			.card-header{
+				border-bottom: 1px solid #eee;
+				font-size: 32px;
+				font-weight: bold;
+				margin-bottom: 15px;
+			}
+			a{
+				text-decoration: underline;
+			}
+		}
+	}
 }
