@@ -25,7 +25,7 @@
                                 <span class="product--price">R{{ $product['price'] }}</span>
                             </div>
                         </div>
-                        <form action="/post-bidding" class="collapse bidding--form" id="collapse{{ $product['id'] }}">
+                        <form method="post" action="/post-bidding" class="collapse bidding--form" id="collapse{{ $product['id'] }}">
                             {!! csrf_field() !!}
                             <input type="hidden" name="product_id" value="{{ $product['id'] }}">
                             <div class="form-group">
@@ -35,7 +35,7 @@
                             <div class="input-group">
                                 <label for="price" class="sr-only">Price</label>
                                 <span class="input-group-addon">R</span>
-                                <input type="text" class="form-control" id="price" id="name" placeholder="00.00">
+                                <input type="text" class="form-control" id="price" name="price" placeholder="00.00">
                             </div>
                             <div class="form-group m-t-15">
                                 <button class="btn btn-primary btn-block" type="submit">Bid Now</button>

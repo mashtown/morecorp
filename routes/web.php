@@ -16,6 +16,9 @@ Route::get('/', function () {
     return view('welcome', ['products' => $products]);
 });
 
+Route::get('/product/{id}/{slug}', 'StoreController@singleProduct');
+Route::post('/post-bidding', 'StoreController@postBidding');
+
 Auth::routes();
 
 Route::prefix('dashboard')->group(function () {
