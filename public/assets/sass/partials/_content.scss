@@ -1,4 +1,13 @@
 body.frontend{
 	// NEST
-	
+	.jumbotron {
+		padding: 50px;
+		text-align: center;
+		// NEST
+		p{
+			max-width: 650px;
+			width: 100%;
+			margin: auto;
+		}
+	}
 }
