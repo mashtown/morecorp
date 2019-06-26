@@ -38,6 +38,9 @@
                 @endforeach
             </tbody>
         </table>
+        <div class="m-t-30 text-right">
+            <a href="/dashboard/products/create" class="btn btn-primary">Add new product</a>
+        </div>
     </div>
 </div>
 @endsection
