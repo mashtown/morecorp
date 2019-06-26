@@ -26,9 +26,9 @@
                 @foreach($products as $product)
                 <tr>
                     <td>{{ $product->name }}</td>
-                    <td>{{ $product->lowest_bid }}</td>
-                    <td>{{ $product->average_bid }}</td>
-                    <td>{{ $product->highest_bid }}</td>
+                    <td>{{ round($product->lowest_bid,2) }}</td>
+                    <td>{{ round($product->average_bid,2) }}</td>
+                    <td>{{ round($product->highest_bid,2) }}</td>
                     <td>{{ $product->views }}</td>
                     <td>
                         <a href="/dashboard/products/edit/{{ $product->id }}">edit</a> / 

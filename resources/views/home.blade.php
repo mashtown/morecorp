@@ -16,8 +16,8 @@
 
                     Welcome {{ Auth::user()->name }}
                     <br><br>
-                    <a href="/dashobard/products">view products</a> / 
-                    <a href="/dashobard/products/create">Add new product</a>
+                    <a href="/dashboard/products">view products</a> / 
+                    <a href="/dashboard/products/create">Add new product</a>
                 </div>
             </div>
         </div>
