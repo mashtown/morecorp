@@ -1,13 +1,8 @@
 @media screen and (max-width: 1220px) {
-  header .navbar.navbar-default .navbar-nav>li>a {
-  	padding: 10px;
-  	line-height: 30px;
-  }
+
 }
 
 @media screen and (max-width: 1199px) {
-	header .col-sm-9{ width: 100%; }
-	header .col-sm-3{ display: none; }
   
 }
 
@@ -17,40 +12,6 @@
 
 @media screen and (max-width: 991px) {
 
-	.navbar-toggle {
-	    border-radius: 0;
-	    border: none;
-	    background-color: #00a99d;
-	    // NEST
-	    .icon-bar { background-color: #fff !important; }
-	}
-	header { padding-bottom: 0; }
-	.free-templates{
-		position: relative;
-	    float: right;
-	    display: inline-block;
-	    margin-right: 5px;
-	    padding: 6px 15px;
-	    margin-top: 8px;
-	    margin-bottom: 8px;
-	    text-transform: uppercase;
-	    font-size: 14px;
-	    font-weight: bold;
-	    color: #fff;
-	    background-color: #85bf31;
-	}
-	section#home-page .cv-tremplates .temp-description-wrapper { max-width: initial; }
-
-	.post-sidebar{
-		.side--item { position: relative !important;}
-		&.stuck-top{
-			.side--item {
-				position: relative !important;
-				top: auto !important;
-			}
-		}
-	}
-
 }
 
 @media screen and (max-width: 860px) {
@@ -58,19 +19,6 @@
 }
 
 @media screen and (max-width: 767px) {
-	header { border-bottom-width: 2px; }
-	.loan--comparison{
-		// NEST
-		.form--wrapper{
-			// NEST
-			.p-r-0 { padding-right: 15px !important; }
-			.p-l-0 { padding-left: 15px !important; }
-			.btn{
-				display: block;
-				width: 100%;
-			}
-		}
-	}
 
 }
 
@@ -79,84 +27,13 @@
 }
 
 @media screen and (max-width: 625px) {
-	.navbar-brand {
-		width: 230px;
-		padding-left: 0;
-	}
-	.navbar-toggle { margin-right: 0; }
-	.free-templates {
-	    margin-right: 6px;
-	    padding: 8px 10px;
-	    font-size: 10px;
-	}
 }
 
-.show-smaller-screens{ display: none; }
 @media screen and (max-width: 550px) {
-
-	.single-post { padding-top: 0; }
-	.show-smaller-screens{
-		display: block;
-		height: auto !important;
-		line-height: initial !important;
-		padding-top: 10px;
-		// NEST
-		.text-right{ text-align: left; }
-		a{ line-height: 26px; }
-	}
-	.hidden-smaller-screens{ display: none; }
-
-	#main-heading {
-	    padding-top: 30px;
-	    padding-bottom: 55px;
-	    // NEST
-	    h1 { font-size: 24px; }
-	    p { font-size: 16px; }
-	}
-
-	.btn { white-space: pre-wrap; }
-	.compare-btn a{
-		display: block;
-		width: 100%;
-		margin-bottom: 10px;
-	}
 
 }
 
 @media screen and (max-width: 475px) {
-
-	header .col-sm-12{
-		padding-left: 5px;
-		padding-right: 5px;
-	}
-
-	.input-group{
-    	width: 100%;
-    	// NEST
-    	.form-control, .input-group-btn{
-    		display: block;
-    		float: none;
-    		width: 100%;
-    	}
-    	.form-control {
-    		height: 50px;
-    		font-size: 16px;
-    	}
-    	.input-group-btn{
-    		white-space: initial;
-    		// NEST
-    		.btn{
-    			display: block;
-    			width: 100%;
-    			padding: 15px;
-    		}
-    	}
-    }
-
-    .navbar-brand {
-	    width: 190px;
-	    height: auto;
-	}
 
 }
 
@@ -168,20 +45,13 @@
 }
 
 @media screen and (max-width: 375px) {
-	.navbar-brand { width: 150px; }
-	.single-post h1 { font-size: 24px; }
+
 }
 
 @media screen and (max-width: 345px) {
-  section#latest-posts .list--posts { padding: 0; }
-  // section#latest-posts .big--title { font-size: 36px; }
-  .navbar-brand { width: 150px; }
+
 }
 
 @media screen and (max-width: 320px) {
-	.navbar-brand { width: 120px; }
-	.free-templates {
-	    padding: 10px 8px;
-	    font-size: 8px;
-	}
+	
 }
