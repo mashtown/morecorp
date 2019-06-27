@@ -35,7 +35,8 @@
                             <div class="input-group">
                                 <label for="price" class="sr-only">Price</label>
                                 <span class="input-group-addon">R</span>
-                                <input type="text" class="form-control" id="price" name="price" placeholder="00.00">
+                                @php $bid = ($product['price'] + ( $product['price'] * 0.15)); @endphp
+                                <input type="text" class="form-control" id="price" name="price" placeholder="00.00" value="{{ number_format((float) $bid, 2, '.', '') }}">
                             </div>
                             <div class="form-group m-t-15">
                                 <button class="btn btn-primary btn-block" type="submit">Bid Now</button>
