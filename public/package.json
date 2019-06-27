@@ -12,7 +12,11 @@
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.0.3",
     "gulp-concat": "^2.6.1",
+    "gulp-rev": "^9.0.0",
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "^2.0.1"
+  },
+  "dependencies": {
+    "gulp-asset-version": "^0.1.1"
   }
 }

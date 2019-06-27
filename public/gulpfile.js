@@ -3,6 +3,8 @@ var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var cleanCSS = require('gulp-clean-css');
 var sass = require('gulp-sass');
+var assetVersion = require('gulp-asset-version');
+const rev = require('gulp-rev');
 
 gulp.task('scripts', function(){
 	return gulp.src([
@@ -20,7 +22,8 @@ gulp.task('scripts', function(){
     ])
 	.pipe(concat('mcorp.min.js'))
 	.pipe(uglify())
-	.pipe(gulp.dest('assets/build/'));
+    .pipe(rev())
+	.pipe(gulp.dest('assets/build/'))
 });
 
 gulp.task('sass', function () {
@@ -40,6 +43,7 @@ gulp.task('styles', function() {
 	.pipe(sass().on('error', sass.logError))
 	.pipe(concat('mcorp.min.css'))
 	.pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(rev())
 	.pipe(gulp.dest('assets/build/'))
 });
 
