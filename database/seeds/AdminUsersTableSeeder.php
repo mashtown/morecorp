@@ -15,13 +15,13 @@ class AdminUsersTableSeeder extends Seeder
 
         \App\User::create(array(
             'name' => 'Chris Joe',
-            'email' => 'admin@mirecop.com',
+            'email' => 'admin@morecorp.com',
             'password' => bcrypt('password')
         ));
 
         \App\User::create(array(
             'name' => 'John Doe',
-            'email' => 'john@mirecop.com',
+            'email' => 'john@morecorp.com',
             'password' => bcrypt('password')
         ));
     }
