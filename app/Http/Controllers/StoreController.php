@@ -39,6 +39,7 @@ class StoreController extends Controller
         $highest_bidder = $product->bidings()->max('price');
         $average_bid = $product->bidings()->avg('price');
         $lowest_bidder = $product->bidings()->min('price');
+        $count_biddings = $product->bidings()->get();
 
         // dd(\Session::all());
 
@@ -54,8 +55,11 @@ class StoreController extends Controller
             $product->increment('views');
         }
 
+        // dd(count());
+
         return view('store.products.single', [
         	'product' => $product,
+        	'hasBiddings' => ((count($count_biddings) > 0) ? TRUE : FALSE ),
         	'highest_bidder' 	=> $highest_bidder,
         	'lowest_bidder' 	=> $lowest_bidder,
         	'average_bid' 		=> $average_bid,
