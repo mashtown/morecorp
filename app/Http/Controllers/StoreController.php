@@ -23,52 +23,14 @@ class StoreController extends Controller
         $bidding->price = $request->price;
 
         $product = Product::findOrFail($request->product_id);
+        $redirect_url = '/product/'. $product->id . '/' . str_slug($product->name);
 
-        if($bidding->save()){
+    	if($bidding->save()){
         	\Session::put('user_email', $request->email);
-            return redirect($redirect_url)->with('status', 'Bidding successfully');
-        }
-
-        // dd($request->product_id);
-
-        // $userBid = Bidding::firstOrNew(array('email' => $request->email));
-
-        /*$user_bid = Bidding::updateOrCreate([
-        	'product_id' 	=> $request->product_id,
-        	'email' 		=> $request->email,
-        	'price' 		=> $request->price,
-        ]);
-
-        if($user_bid->save()){
-        	\Session::put('user_email', $request->email);
-        	$redirect_url = '/product/'. $product->id . '/' . str_slug($product->name);
-	        return redirect($redirect_url)->with('status', 'Bidding successfully');
+            return redirect($redirect_url)->with('status', 'Bidding successfully created');
         }else{
         	return redirect()->back()->withInput();
-        }*/
-
-        // dd($userBid);
-        /*$redirect_url = '/product/'. $product->id . '/' . str_slug($product->name);
-
-        if($userBid === null){
-
-	        dd($bidding->product_id);
-        	$bidding->save();
-        	\Session::put('user_email', $request->email);
-            return redirect($redirect_url)->with('status', 'Bidding successfully');
-
-        }else{
-
-        	$userBid->price = $request->price;
-
-			if($userBid->save()){
-	        	\Session::put('user_email', $request->email);
-	            return redirect($redirect_url)->with('status', 'Bidding successfully');
-	        }
-        	
         }
-
-        return redirect()->back()->withInput();*/
     }
 
     public function singleProduct($id, $slug){
@@ -82,7 +44,7 @@ class StoreController extends Controller
 
         if(\Session::has('user_email')){
 			$user_email = \Session::get('user_email');
-			$your_bidding = Bidding::where('email', $user_email)->where('product_id', $id)->first();
+			$your_bidding = Bidding::where('email', $user_email)->where('product_id', $id)->orderBy('created_at', 'DESC')->first();
 			// dd($user_email);
         }
 
