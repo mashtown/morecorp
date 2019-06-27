@@ -23,6 +23,7 @@ class StoreController extends Controller
         $product = Product::findOrFail($request->product_id);
 
         if($bidding->save()){
+        	\Session::put('user_email', $request->email);
             $redirect_url = '/product/'. $product->id . '/' . str_slug($product->name);
             // /product/{{ $product['id'] }}/{{ str_slug($product['name'])
             return redirect($redirect_url)->with('status', 'Bidding successfully');
@@ -37,7 +38,7 @@ class StoreController extends Controller
         $highest_bidder = $product->bidings()->max('price');
         $lowest_bidder = $product->bidings()->min('price');
 
-        // dd($highest_bidder);
+        // dd(\Session::get('user_email'));
 
         if($product){
             $product->increment('views');
