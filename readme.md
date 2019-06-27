@@ -8,21 +8,25 @@ Unfortunately, I didn't use the Laravel mix for this project, just plain npm and
 
 In your command line, navigate to the Laravel public directory and install npm.
 
--[To compile styles only 
+- To compile styles, please run 
 ```bash
-run gulp styles.
+gulp styles.
 ```
--[To compile scripts only 
+- To compile scripts, please run 
 ```bash
-run gulp scripts.
+gulp scripts.
 ```
--[To watch for changes
+- To watch for changes, please run
 ```bash
-run gulp watch
+gulp watch
 ```
 
 ## Database seeder
 
 I've included everything in the database\seeds\DatabaseSeeder.php.
 
-You can seed your db by just php artisan db:seed
+You can seed your db by just running
+
+```bash
+php artisan db:seed
+```
