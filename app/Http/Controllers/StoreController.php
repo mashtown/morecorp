@@ -38,16 +38,20 @@ class StoreController extends Controller
         $highest_bidder = $product->bidings()->max('price');
         $lowest_bidder = $product->bidings()->min('price');
 
-        // dd(\Session::get('user_email'));
+        $user_email = \Session::get('user_email');
+        $your_bidding = Bidding::where('email', $user_email)->where('product_id', $id)->first();
 
-        if($product){
+        // dd($your_bidding->price);
+
+        /*if($product){
             $product->increment('views');
-        }
+        }*/
 
         return view('store.products.single', [
         	'product' => $product,
         	'highest_bidder' => $highest_bidder,
-        	'lowest_bidder' => $lowest_bidder
+        	'lowest_bidder' => $lowest_bidder,
+        	'your_bidding' => ((!empty($your_bidding)) ? $your_bidding->price : 0 )
         ]);
     }
 }

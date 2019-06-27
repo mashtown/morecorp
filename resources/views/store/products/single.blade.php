@@ -23,10 +23,12 @@
 	    					<div class="col-sm-4">Lowest Bid</div>
 	    					<div class="col-sm-6"><strong>R{{ $lowest_bidder }}</strong></div>
 	    				</div>
+	    				@if($your_bidding != 0)
 	    				<div class="row">
-	    					<div class="col-sm-4">Your Bid</div>
-	    					<div class="col-sm-6"><strong>R1480.00</strong></div>
+	    					<div class="col-sm-4">Your Bidding</div>
+	    					<div class="col-sm-6"><strong>R{{ $your_bidding }}</strong></div>
 	    				</div>
+	    				@endif
 	    			</div>
 	    		</div>
 	    		
