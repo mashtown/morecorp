@@ -8,9 +8,18 @@ Unfortunately, I didn't use the Laravel mix for this project, just plain npm and
 
 In your command line, navigate to the Laravel public directory and install npm.
 
--[To compile styles only - ## run gulp styles.
--[To compile scripts only - ## run gulp scripts.
--[To watch for changes - ## run gulp watch
+-[To compile styles only 
+```bash
+run gulp styles.
+```
+-[To compile scripts only 
+```bash
+run gulp scripts.
+```
+-[To watch for changes
+```bash
+run gulp watch
+```
 
 ## Database seeder
 
