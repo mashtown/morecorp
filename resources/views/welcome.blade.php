@@ -19,10 +19,10 @@
                         <div class="row buttons">
                             <div class="col-xs-6">
                                 <a href="/product/{{ $product['id'] }}/{{ str_slug($product['name']) }}" class="">view</a>
-                                <a role="button" data-toggle="collapse" href="#collapse{{ $product['id'] }}" aria-expanded="false" aria-controls="collapse{{ $product['id'] }}">bid</a>
+                                <a role="button" data-toggle="collapse" href="#collapse{{ $product['id'] }}" aria-expanded="false" aria-controls="collapse{{ $product['id'] }}">bid now</a>
                             </div>
                             <div class="col-xs-6 text-right">
-                                <span class="product--price">R{{ $product['price'] }}</span>
+                                <span class="product--price">R{{ sprintf('%0.2f', $product['price']) }}</span>
                             </div>
                         </div>
                         <form method="post" action="/post-bidding" class="collapse bidding--form" id="collapse{{ $product['id'] }}">
@@ -36,7 +36,7 @@
                                 <label for="price" class="sr-only">Price</label>
                                 <span class="input-group-addon">R</span>
                                 @php $bid = ($product['price'] + ( $product['price'] * 0.15)); @endphp
-                                <input type="text" class="form-control" id="price" name="price" placeholder="00.00" value="{{ number_format((float) $bid, 2, '.', '') }}">
+                                <input type="text" class="form-control" id="price" name="price" placeholder="00.00" value="{{ sprintf('%0.2f', $bid) }}">
                             </div>
                             <div class="form-group m-t-15">
                                 <button class="btn btn-primary btn-block" type="submit">Bid Now</button>

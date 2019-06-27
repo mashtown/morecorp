@@ -16,18 +16,26 @@
 	    			<div class="bidders">
 	    				<h3>Biddings</h3>
 	    				<div class="row">
-	    					<div class="col-sm-4">Highest Bid</div>
-	    					<div class="col-sm-6"><strong>R{{ $highest_bidder }}</strong></div>
+	    					<div class="col-sm-4">Highest Bid:</div>
+	    					<div class="col-sm-6"><strong>R{{ sprintf('%0.2f', $highest_bidder) }}</strong></div>
 	    				</div>
 	    				<div class="row">
-	    					<div class="col-sm-4">Lowest Bid</div>
-	    					<div class="col-sm-6"><strong>R{{ $lowest_bidder }}</strong></div>
+	    					<div class="col-sm-4">Lowest Bid:</div>
+	    					<div class="col-sm-6"><strong>R{{ sprintf('%0.2f', $lowest_bidder) }}</strong></div>
 	    				</div>
 	    				@if($your_bidding != 0)
-	    				<div class="row">
-	    					<div class="col-sm-4">Your Bidding</div>
-	    					<div class="col-sm-6"><strong>R{{ $your_bidding }}</strong></div>
-	    				</div>
+		    				<div class="row">
+		    					<div class="col-sm-4">
+		    						<div class="p-tb-5">
+		    							<strong>Your Bidding:</strong>
+		    						</div>
+		    					</div>
+		    					<div class="col-sm-6">
+		    						<div class="highlight_your_bidding">
+		    							<strong>R{{ sprintf('%0.2f', $your_bidding) }}</strong>
+		    						</div>
+		    					</div>
+		    				</div>
 	    				@endif
 	    			</div>
 	    		</div>
